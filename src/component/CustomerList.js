@@ -16,6 +16,7 @@ class CustomerList extends Component {
 
     componentDidMount() {
         customersService.getCustomers().then((result) => {
+            console.log(result);
             this.setState({customers: result.data, nextPageURL: result.nextlink})
         });
     }
